@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
+@font-face {
+    font-family: 'TheWitchcer';
+    src: url('./Thewitcher-jnOj.ttf');
+}
+
+:root.light {
+    --main-color: #981827;
+    --bg-color: #fff;
+    --color-text: #000;
+}
+
+html {
+    color: #fff;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url('./images/background.png');
+}
+
+.container {
+    display: flex;
+
+    width: 80vw;
+    height: 80vh;
+}
+
+/* Cover ========================= */
+
+.cover {
+    position: relative;
+    
+    flex: 1 0 auto;
+
+    max-width: 30vw;
+
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    
+    overflow: hidden;
+}
+
+.cover__inner {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cover:hover .cover__inner {
+    opacity: 1;
+}
+
+.cover__logo {
+    height: 6rem;
+
+    object-fit: cover;
+}
+
+/* slider ============================ */
+
+.slider {
+    display: flex;
+    height: 100%;
+
+    overflow: scroll;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider__item {
+    flex: 1 0 auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Content ======================== */
+
+.content {
+
+}
+
+.content__intro {
+
+}
+
+.content__text {
+
+}
+
+.form {
+    
+}
+
+.form__header {
+    
+}
+
+.form__item {
+    
+}
+
+.label {
+
+}
+
+.input {
+
+}
+
+.form__btn {
+
+}
+
+.content__footer {
+
+}
