@@ -12,8 +12,8 @@
 <body>
     <div class="wrapper">
         <div class="container">
-
             <aside class="cover">
+                <img class="dettlaff" src="./images/dettlaff.png" alt="">
                 <div class="cover__inner">
                     <img class="cover__logo" src="./images/logo.png" alt="">
                 </div>
@@ -26,50 +26,53 @@
     
             <main class="content">
     
-                <div class="content__intro">
-                    <p class="content__text">This is not a real online service! You now you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-                    <p class="content__text">You now you want to.</p>
-                </div>
-    
-                <form class="form" action="#" method="post" id="form-account">
-    
-                    <h2 class="form__header">Let's do this!</h2>
-    
-                    <div class="form__item">
-                        <label class="label" for="first-name">first name</label>
-                        <input class="input input_fname" type="text" name="firstName" id="first-name" required minlength="" maxlength="" placeholder="">
+                <div class="content__inner">
+                    <div class="content__intro">
+                        <p class="content__text">This is not a real online service! You now you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                        <p class="content__text">You now you want to.</p>
                     </div>
-    
-                    <div class="form__item">
-                        <label class="label" for="last-name">last name</label>
-                        <input class="input input_sname" type="text" name="lastName" id="last-name" required minlength="" maxlength=""placeholder="">
-                    </div>
-    
-                    <div class="form__item">
-                        <label class="label" for="email">email</label>
-                        <input class="input input_email" type="email" name="email" id="email" required placeholder="">
-                    </div>
-    
-                    <div class="form__item">
-                        <label class="label" for="phone">phone number</label>
-                        <input class="input input_phone" type="tel" name="phone" id="phone">
-                    </div>
-    
-                    <div class="form__item">
-                        <label class="label" for="">password</label>
-                        <input class="input input_password" type="password" name="password" id="password" required minlength="" maxlength="" pattern="" title="">
-                    </div>
-    
-                    <div class="form__item">
-                        <label class="label" for="password-confirm">confirm password</label>
-                        <input class="input input_confpassword" type="password" name="passwordConfirm" id="password-confirm" required minlength="" maxlength="">
-                    </div>
+        
+                    <form class="form" action="#" method="post" id="form-account">
+        
+                        <h2 class="form__header">Let's do this!</h2>
+        
+                        <div class="form__item">
+                            <label class="label" for="first-name">first name</label>
+                            <input class="input input_fname" type="text" name="firstName" id="first-name" required minlength="" maxlength="" placeholder="">
+                        </div>
+        
+                        <div class="form__item">
+                            <label class="label" for="last-name">last name</label>
+                            <input class="input input_sname" type="text" name="lastName" id="last-name" required minlength="" maxlength=""placeholder="">
+                        </div>
+        
+                        <div class="form__item">
+                            <label class="label" for="email">email</label>
+                            <input class="input input_email" type="email" name="email" id="email" required placeholder="">
+                        </div>
+        
+                        <div class="form__item">
+                            <label class="label" for="phone">phone number</label>
+                            <input class="input input_phone" type="tel" name="phone" id="phone">
+                        </div>
+        
+                        <div class="form__item">
+                            <label class="label" for="">password</label>
+                            <input class="input input_password" type="password" name="password" id="password" required minlength="" maxlength="" pattern="" title="">
+                        </div>
+        
+                        <div class="form__item">
+                            <label class="label" for="password-confirm">confirm password</label>
+                            <input class="input input_confpassword" type="password" name="passwordConfirm" id="password-confirm" required minlength="" maxlength="">
+                        </div>
+                        
+                    </form>
                     
-                </form>
+                    <button form="form-account" class="form__btn" type="submit">create account</button>
+                    
+                    <div class="content__footer">Already have an account? <a href="">Log in</a></div>
+                </div>
                 
-                <button form="form-account" class="form__btn" type="submit">create account</button>
-                
-                <div class="content__footer">Already have an account? <a href="">Log in</a></div>
             </main>
         </div>
     </div>
