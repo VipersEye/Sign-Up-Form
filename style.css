@@ -5,8 +5,7 @@
     src: url('./Thewitcher-jnOj.ttf');
 }
 
-:root.light {
-    --main-color: #981827;
+:root.standard {
     --bg-color: #fff;
     --color-text: #000;
 }
@@ -61,7 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: -11.7vh;
     left: 4.7%;
-    z-index: 10;
+    z-index: 1;
+
+    display: none;
     height: 30vh;
 
     transform: rotateY(180deg);
@@ -118,45 +119,74 @@ h1, h2, h3, h4, h5, h6 {
 /* Content ======================== */
 
 .content {
-        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: max(0%, 3rem) 0;
 }
 
 .content__inner {
+    padding: 3rem 3rem;
+    height: 100%;
+    
+    color: var(--color-text);
+    
+    background: #fff;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 
-}
-
-.content__intro {
-
+    box-shadow: 0 0 14px 10px rgb(149, 149, 149);
 }
 
 .content__text {
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
 
+.content__header {
+    font-family: 'TheWitchcer', sans-serif;
 }
 
 .form {
+    display: flex;
+    flex-wrap: wrap;
     
+    padding: 1.6rem 0;
+    row-gap: 1rem;
 }
 
-.form__header {
-    
-}
 
 .form__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     
+    width: 40%;
 }
 
 .label {
-
+    font-family: 'TheWitchcer', sans-serif;
+    font-size: 1.3rem;
 }
 
 .input {
-
+    width: 17rem;
+    height: 2rem;
+    
+    font-size: 100%;
+    font-family: inherit;
 }
 
 .form__btn {
-
+    margin-bottom: 1.5rem;
 }
 
 .content__footer {
 
+}
+
+.active {
+    display: block;
 }
