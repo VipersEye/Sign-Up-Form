@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Roboto:wght@400;700&display=swap');
 
 @font-face {
     font-family: 'TheWitchcer';
@@ -6,12 +6,28 @@
 }
 
 :root.standard {
+    --main-background: url('./images/bg-std.png') center no-repeat;
+    --logo: url('./images/logo-std.png') center no-repeat;
+    --logo-bg: rgba(0, 0, 0, 0.8);
+}
+
+:root.hearts-of-stone {
+    --main-background: url('./images/bg-hos.jpg') center no-repeat;
+    --logo: url('./images/logo-hos.png') center no-repeat;
+}
+
+:root.blood-and-wine {
     --bg-color: #fff;
-    --color-text: #000;
+    --main-color: #981827;
+    --text-color: #000;
+    --shadow: 0 0 20px 10px rgb(114, 34, 43, .3);
+    --main-background: url('./images/bg-baw.jpg') center no-repeat;
+    --logo: url('./images/logo-baw.png') center no-repeat;
+    --logo-bg: rgba(105, 24, 24, 0.8);
+    --btn-hover: #b90a1e;
 }
 
 html {
-    color: #fff;
     font-size: 100%;
 }
 
@@ -35,12 +51,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     height: 100vh;
 
-    background: url('./images/bg-baw.jpg') center no-repeat;
+    background: var(--main-background);
     background-size: cover;
 }
 
 .container {
-    position: relative;
     display: flex;
 
     width: 80vw;
@@ -56,33 +71,20 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 30vw;
 }
 
-.dettlaff {
-    position: absolute;
-    top: -11.7vh;
-    left: 4.7%;
-    z-index: 1;
-
-    display: none;
-    height: 30vh;
-
-    transform: rotateY(180deg);
-}
-
 .cover__inner {
     position: absolute;
     top: 30%;
     left: 0;
     right: 0;
     
+    padding: 1rem 2rem;
+    
     text-align: center;
 
-    padding: 1rem 2rem;
-
-    background: rgba(0, 0, 0, 0.8);
-
+    background: var(--logo-bg);
     opacity: 0;
 
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.4s linear;
 }
 
 .cover:hover .cover__inner {
@@ -92,7 +94,12 @@ h1, h2, h3, h4, h5, h6 {
 .cover__logo {
     height: 6rem;
 
-    object-fit: cover;
+    background: var(--logo);
+    background-size: contain;
+}
+
+.cover__logo_DLC {
+    height: 9rem;
 }
 
 /* slider ============================ */
@@ -130,24 +137,30 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem 3rem;
     height: 100%;
     
-    color: var(--color-text);
+    color: var(--text-color);
     
     background: #fff;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 
-    box-shadow: 0 0 14px 10px rgb(149, 149, 149);
+    box-shadow: var(--shadow);
 }
 
 .content__text {
+    padding-right: 6rem;
+    
     font-family: 'Metamorphous', cursive;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
 .content__header {
     font-family: 'TheWitchcer', sans-serif;
+    font-size: 1.7rem;
+    color: var(--main-color);
 }
+
+/* form ============================= */
 
 .form {
     display: flex;
@@ -155,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
     
     padding: 1.6rem 0;
     row-gap: 1rem;
+    column-gap: 3rem;
 }
 
 
@@ -163,30 +177,97 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: flex-start;
     
-    width: 40%;
+    min-width: 40%;
 }
 
 .label {
     font-family: 'TheWitchcer', sans-serif;
     font-size: 1.3rem;
+    color: var(--main-color);
 }
 
 .input {
+    padding: 0 1rem;
     width: 17rem;
     height: 2rem;
     
-    font-size: 100%;
-    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+
+    border: 2px solid #000;
+    border-radius: 0.3rem;
+
+    outline: none;
+
+    transition: border 0.3s ease-in-out;
+}
+
+.input::placeholder {
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.2rem;
+    color: #cacaca;
+}
+
+input:focus, input:hover {
+    border-color: var(--main-color);
 }
 
 .form__btn {
     margin-bottom: 1.5rem;
+    padding: .7rem 4rem;
+
+    font-family: 'TheWitchcer', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+
+    background: var(--main-color);
+    border: none;
+    border-radius: .5rem;
+
+    cursor: pointer;
+
+    transition: background 0.3s linear;
 }
+
+.form__btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.form__btn:active {
+    background-color: var(--main-color);
+}
+
+/* footer ========================= */
 
 .content__footer {
-
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
-.active {
-    display: block;
+.content__footer a:link {
+    color: var(--main-color);
+}
+
+.content__footer a:visited {
+    color: var(--btn-hover);
+}
+
+.dettlaff {
+    position: absolute;
+    top: -11.7vh;
+    right: -42.5vh;
+    z-index: 1;
+
+    height: 30vh;
+
+    opacity: 0;
+
+    transform: rotateY(180deg);
+}
+
+:root.blood-and-wine .dettlaff {
+    opacity: 1;
 }
