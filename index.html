@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="standard" lang="en">
+<html class="blood-and-wine" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Witcher, 3, form, subscribe, game, CDPR, CD, Project, Red, Geralt">
@@ -13,14 +13,14 @@
     <div class="wrapper">
         <div class="container">
             <aside class="cover">
-                <img class="dettlaff" src="./images/dettlaff.png" alt="">
+                <img class="dettlaff active" src="./images/dettlaff.png" alt="">
                 <div class="cover__inner">
-                    <img class="cover__logo" src="./images/logo.png" alt="">
+                    <img class="cover__logo cover__logo_DLC" src="./images/logo-baw.png" alt="">
                 </div>
                 <div class="slider">
-                    <img class="slider__item" src="./images/cover1.jpg" alt="">
-                    <img class="slider__item" src="./images/cover2.jpg" alt="">
-                    <img class="slider__item" src="https://via.placeholder.com/100" alt="">
+                    <img class="slider__item" src="./images/cover-baw-2.jpg" alt="">
+                    <img class="slider__item" src="./images/cover-baw-1.jpg" alt="">
+                    <img class="slider__item" src="./images/cover-std-1.jpg" alt="">
                 </div>
             </aside>
     
@@ -28,8 +28,7 @@
     
                 <div class="content__inner">
                     <div class="content__intro">
-                        <p class="content__text">This is not a real online service! You now you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-                        <p class="content__text">You now you want to.</p>
+                        <p class="content__text">Become professional monster slayer Geralt of Rivia and explore Toussaint, where you will unravel the horrifying secret behind a beast terrorizing the kingdom. With all trails leading to dead ends, only a witcher can solve the mystery and survive the evil lurking in the night.</p>
                     </div>
         
                     <h2 class="content__header">Let's get this over with!</h2>
@@ -38,32 +37,32 @@
                 
                         <div class="form__item">
                             <label class="label" for="first-name">first name</label>
-                            <input class="input input_fname" type="text" name="firstName" id="first-name" required minlength="" maxlength="" placeholder="">
+                            <input class="input input_fname" type="text" name="firstName" id="first-name" required minlength="3" maxlength="20" placeholder="Geralt">
                         </div>
         
                         <div class="form__item">
                             <label class="label" for="last-name">last name</label>
-                            <input class="input input_sname" type="text" name="lastName" id="last-name" required minlength="" maxlength=""placeholder="">
+                            <input class="input input_sname" type="text" name="lastName" id="last-name" required minlength="3" maxlength="20"placeholder="from Rivia">
                         </div>
         
                         <div class="form__item">
                             <label class="label" for="email">email</label>
-                            <input class="input input_email" type="email" name="email" id="email" required placeholder="">
+                            <input class="input input_email" type="email" name="email" id="email" minlength="6" maxlength="20" required placeholder="geralt@gmail.com">
                         </div>
         
                         <div class="form__item">
                             <label class="label" for="phone">phone number</label>
-                            <input class="input input_phone" type="tel" name="phone" id="phone">
+                            <input class="input input_phone" type="tel" name="phone" id="phone" minlength="5" maxlength="20">
                         </div>
         
                         <div class="form__item">
                             <label class="label" for="">password</label>
-                            <input class="input input_password" type="password" name="password" id="password" required minlength="" maxlength="" pattern="" title="">
+                            <input class="input input_password" type="password" name="password" id="password" required minlength="8" maxlength="20" pattern="\w{8,20}" title="Password must be from 8 to 20 characters. You can use: letters (A-z), numerals (0-9) and symbol '_'">
                         </div>
         
                         <div class="form__item">
                             <label class="label" for="password-confirm">confirm password</label>
-                            <input class="input input_confpassword" type="password" name="passwordConfirm" id="password-confirm" required minlength="" maxlength="">
+                            <input class="input input_confpassword" type="password" name="passwordConfirm" id="password-confirm" required minlength="8" maxlength="20">
                         </div>
                         
                     </form>
