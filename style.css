@@ -6,14 +6,26 @@
 }
 
 :root.standard {
-    --main-background: url('./images/bg-std.png') center no-repeat;
+    --bg-color: #fff;
+    --main-color: #000;
+    --text-color: #000;
+    --shadow: 0 0 20px 10px rgb(18, 74, 101, .3);
+    --main-background: url('./images/bg-stdv2.jpg') center no-repeat;
     --logo: url('./images/logo-std.png') center no-repeat;
     --logo-bg: rgba(0, 0, 0, 0.8);
+    --form-hover: #c01720; 
+    --btn-hover: #c01720;
 }
 
 :root.hearts-of-stone {
+    --bg-color: #fff;
+    --main-color: #0b7aa4;
+    --text-color: #000;
+    --shadow: 0 0 20px 10px rgb(18, 74, 101, .3);
     --main-background: url('./images/bg-hos.jpg') center no-repeat;
     --logo: url('./images/logo-hos.png') center no-repeat;
+    --logo-bg: rgba(19, 146, 187, 0.8);
+    --btn-hover: #22a0ca;
 }
 
 :root.blood-and-wine {
@@ -98,10 +110,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: contain;
 }
 
-.cover__logo_DLC {
-    height: 9rem;
-}
-
 /* slider ============================ */
 
 .slider {
@@ -119,6 +127,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slider__item {
+    display: none;
+    
     min-width: 100%;
     object-fit: cover;
 }
@@ -139,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     
     color: var(--text-color);
     
-    background: #fff;
+    background: var(--bg-color);
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 
@@ -209,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input:focus, input:hover {
-    border-color: var(--main-color);
+    border-color: var(--form-hover, var(--main-color));
 }
 
 .form__btn {
@@ -270,4 +280,21 @@ input:focus, input:hover {
 
 :root.blood-and-wine .dettlaff {
     opacity: 1;
+}
+
+:root.blood-and-wine .baw {
+    display: block;
+}
+
+:root.hearts-of-stone .hos {
+    display: block;
+}
+
+:root.standard .std {
+    display: block;
+}
+
+:root.blood-and-wine .cover__logo,
+:root.hearts-of-stone .cover__logo {
+    height: 9rem;
 }
