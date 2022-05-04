@@ -33,20 +33,21 @@ function changeMod(e) {
             root.classList.remove('hearts-of-stone');
             root.classList.remove('blood-and-wine');
             root.classList.add('standard');
-            audios[0].volume = 0.7;
+            audios[0].volume = 0.4;
             audios[0].play();
             break;
         case (this.classList.contains('menu__item_hos')):
             root.classList.remove('standard');
             root.classList.remove('blood-and-wine');
             root.classList.add('hearts-of-stone');
+            audios[1].volume = 0.7;
             audios[1].play();
             break;
         case (this.classList.contains('menu__item_baw')):
             root.classList.remove('hearts-of-stone');
             root.classList.remove('standard');
             root.classList.add('blood-and-wine');
-            audios[2].volume = 0.5;
+            audios[2].volume = 0.3;
             audios[2].play();
             break;
     }
