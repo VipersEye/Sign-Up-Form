@@ -21,11 +21,15 @@ function changeMod(e) {
     let slider = document.querySelector('.slider');
     let audios = document.querySelectorAll('audio');
     slider.scroll(0, 0);
+    audios[0].pause();
+    audios[1].pause();
+    audios[2].pause();
+    audios[0].currentTime = 0;
+    audios[1].currentTime = 0;
+    audios[2].currentTime = 0;
     switch (true) {
         case (this.classList.contains('menu__item_std')):
-            audios[0].pause();
-            audios[1].pause();
-            audios[2].pause();
+            
             root.classList.remove('hearts-of-stone');
             root.classList.remove('blood-and-wine');
             root.classList.add('standard');
@@ -33,18 +37,12 @@ function changeMod(e) {
             audios[0].play();
             break;
         case (this.classList.contains('menu__item_hos')):
-            audios[0].pause();
-            audios[1].pause();
-            audios[2].pause();
             root.classList.remove('standard');
             root.classList.remove('blood-and-wine');
             root.classList.add('hearts-of-stone');
             audios[1].play();
             break;
         case (this.classList.contains('menu__item_baw')):
-            audios[0].pause();
-            audios[1].pause();
-            audios[2].pause();
             root.classList.remove('hearts-of-stone');
             root.classList.remove('standard');
             root.classList.add('blood-and-wine');
