@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: color .3s linear;
 }
 
-/* form ============================= */
+/* form =========================== */
 
 .form {
     display: flex;
@@ -187,9 +187,9 @@ h1, h2, h3, h4, h5, h6 {
 
     position: relative;
     
-    padding: 1.6rem 6rem 1.6rem 0;
+    padding: 1.6rem 8rem 1.6rem 0;
     row-gap: 1rem;
-    column-gap: 3rem;
+    column-gap: 4rem;
 }
 
 
@@ -199,13 +199,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
 
     position: relative;
-    
-    min-width: 35%;
 }
 
 .form__item span::after {
     position: absolute;
-    right: -1.5rem;
+    right: -2.5rem;
     bottom: 0;
     z-index: 100;
 
@@ -353,7 +351,7 @@ input:focus, input:hover {
     position: absolute;
     top: -11.7vh;
     right: -42.5vh;
-    z-index: 1;
+    z-index: -1;
 
     height: 30vh;
 
@@ -365,6 +363,7 @@ input:focus, input:hover {
 }
 
 :root.blood-and-wine .dettlaff {
+    z-index: 1;
     opacity: 1;
 }
 
@@ -387,8 +386,76 @@ input:focus, input:hover {
 
 /* media ======================== */
 
-@media (max-width: 1475px) {
+@media (max-width: 1570px) {
     .content__intro {
+        display: none;
+    }
+
+    .dettlaff {
+        top: -9.7vh;
+        right: -35.5vh;
+
+        height: 25vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content__header {
+        font-size: 1.5rem;
+    }
+
+    .label {
+        font-size: 1.1rem;
+    }
+    
+    .input {
+        width: 13rem;
+        height: 1.7rem;
+
+        font-size: 1.1rem;
+    }
+
+    .input::placeholder {
+        font-size: 0.9rem;
+    }
+
+    .form__item span::after {
+        right: -2rem;
+
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .form__btn {
+        padding: 0.5rem 2.5rem;
+
+        font-size: 1rem;
+
+        border-radius: 0.3rem;
+    }
+
+    .content__footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .cover {
+        display: none;
+    }
+
+    .content__inner {
+        border-radius: 2rem;
+    }
+}
+
+@media (max-width: 425px) { 
+
+    .form {
+        padding-right: 0;
+    }
+
+    .menu {
         display: none;
     }
 }
