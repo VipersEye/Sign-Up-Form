@@ -15,7 +15,7 @@
 ## Screenshots
 ### Standard Style
 ![A](https://github.com/VipersEye/Sign-Up-Form/blob/main/screenshots/screenshot-std.png?raw=true)
-### Hearts of stone style
+### Hearts Of Stone Style
 ![A](https://github.com/VipersEye/Sign-Up-Form/blob/main/screenshots/screenshot-hos.png?raw=true)
-### Blood and wine style
+### Blood And Wine Style
 ![A](https://github.com/VipersEye/Sign-Up-Form/blob/main/screenshots/screenshot-baw.png?raw=true)
