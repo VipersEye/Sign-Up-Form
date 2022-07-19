@@ -1,5 +1,5 @@
 # Sign-Up-Form
-
+![A](https://github.com/VipersEye/Sign-Up-Form/blob/main/screenshots/screenshot-main.png?raw=true)
 ## Demo
 [Live demo 👁️](https://viperseye.github.io/Sign-Up-Form/)
 ## Built with
